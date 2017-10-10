@@ -50,6 +50,14 @@ class SleepController extends Controller
             'dreams' => 'nullable',
         ]);
 
+        if (!is_null(request('hadAlcool'))) {
+            $data['hadAlcool'] = true;
+        }
+
+        if (!is_null(request('tookAnxieryPill'))) {
+            $data['tookAnxieryPill'] = true;
+        }
+
         auth()->user()->sleeps()->create($data);
 
         return redirect()->back()->with('status', 'Got it!');

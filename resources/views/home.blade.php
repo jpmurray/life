@@ -75,6 +75,38 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('tookAnxieryPill') ? ' has-error' : '' }}">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="tookAnxieryPill" {{ old('tookAnxieryPill') ? 'checked' : '' }}> Took an anxiety pill?
+                                    </label>
+                                </div>
+
+                                @if ($errors->has('tookAnxieryPill'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('tookAnxieryPill') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('hadAlcool') ? ' has-error' : '' }}">
+                            <div class="col-md-6 col-md-offset-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="hadAlcool" {{ old('hadAlcool') ? 'checked' : '' }}> Any alcool in the evening before bed?
+                                    </label>
+                                </div>
+
+                                @if ($errors->has('hadAlcool'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('hadAlcool') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('timesAwaken') ? ' has-error' : '' }}">
                             <label for="timesAwaken" class="col-md-4 control-label">Woke up how many time?</label>
 

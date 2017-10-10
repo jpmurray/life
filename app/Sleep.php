@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sleep extends Model
 {
     protected $fillable = [
-        'date', 'energyAtNight', 'anxietyLevel', 'timesAwaken', 'energyInMorning', 'dreams',
+        'date', 'energyAtNight', 'anxietyLevel', 'timesAwaken', 'energyInMorning', 'sleeps', 'tookAnxieryPill', 'hadAlcool', 'dreams',
     ];
 
     public function user()
